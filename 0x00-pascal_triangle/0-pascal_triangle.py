@@ -1,18 +1,15 @@
 #!/usr/bin/python3
+
+
 def pascal_triangle(n):
     """
     Generate Pascal's triangle up to the nth row.
 
-    This function generates Pascal's triangle up to the nth row and returns it as a list of lists.
-
     Args:
-        n (int): The number of rows to generate in Pascal's triangle. Should be a positive integer.
+        n (int): The number of rows to generate.
 
     Returns:
-        list: A list of lists representing Pascal's triangle. Each inner list contains the numbers of a row.
-
-    Raises:
-        ValueError: If n is less than or equal to 0.
+        list of lists: Pascal's triangle up to the nth row.
     """
     if n <= 0:
         return []
