@@ -2,9 +2,10 @@
 """
 Module: lockboxes.py
 
-This module provides a function for determining whether all the boxes in a sequence
-of locked boxes can be opened. Each box may contain keys to other boxes, and the goal
-is to check if all boxes can be unlocked starting from the first box.
+This module provides a function for determining whether all the boxes in a
+sequence of locked boxes can be opened. Each box may contain keys to other
+boxes, and the goal is to check if all boxes can be unlocked starting from
+the first box.
 
 Example Usage:
     from lockboxes import canUnlockAll
@@ -29,7 +30,8 @@ def canUnlockAll(boxes):
     Determine if all boxes can be opened.
 
     Args:
-    - boxes (List[List[int]]): A list of lists where each inner list represents a box containing keys to other boxes.
+    - boxes (List[List[int]]): A list of lists where each inner list represents
+    a box containing keys to other boxes.
 
     Returns:
     - bool: True if all boxes can be opened, False otherwise.
@@ -53,5 +55,5 @@ def canUnlockAll(boxes):
                 visited[key] = True
                 queue.append(key)
 
-    # Finally, check if all the values in 'visited' are True (all boxes were visited)
+    # Check if all the values in 'visited' are True (all boxes visited)
     return all(visited)
