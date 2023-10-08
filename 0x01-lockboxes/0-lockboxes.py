@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+from collections import deque
+
+
 """
 Module: lockboxes.py
 
@@ -40,17 +43,17 @@ def canUnlockAll(boxes):
     # The first box is always unlocked
     visited[0] = True
 
-    # Initialize a stack that will keep track of the boxes with keys in them
-    stack = [0]
+    # Initialize a queue that will keep track of the boxes with keys in them
+    queue = deque([0])
 
-    while stack:
-        current_box = stack.pop()
+    while queue:
+        current_box = queue.popleft()
 
         # Loop over the keys in the current box
         for key in boxes[current_box]:
-            if not visited[key]:
+            if 0 <= key < num_boxes and not visited[key]:
                 visited[key] = True
-                stack.append(key)
+                queue.append(key)
 
     # Finally, check if all the values in 'visited' are True (all boxes were visited)
     return all(visited)
