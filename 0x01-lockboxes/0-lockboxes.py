@@ -1,5 +1,28 @@
 #!/usr/bin/python3
 
+"""
+Module: lockboxes.py
+
+This module provides a function for determining whether all the boxes in a sequence
+of locked boxes can be opened. Each box may contain keys to other boxes, and the goal
+is to check if all boxes can be unlocked starting from the first box.
+
+Example Usage:
+    from lockboxes import canUnlockAll
+
+    boxes = [[1], [2], [3], [4], []]
+    result = canUnlockAll(boxes)
+    print(result)  # True
+
+    boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
+    result = canUnlockAll(boxes)
+    print(result)  # True
+
+    boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
+    result = canUnlockAll(boxes)
+    print(result)  # False
+"""
+
 
 def canUnlockAll(data):
     """
