@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Module: lockboxes.py
 
