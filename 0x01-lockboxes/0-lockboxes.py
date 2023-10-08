@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from collections import deque
 """
 Module: lockboxes.py
 
@@ -22,6 +21,7 @@ Example Usage:
     result = canUnlockAll(boxes)
     print(result)  # False
 """
+from collections import deque
 
 
 def canUnlockAll(boxes):
