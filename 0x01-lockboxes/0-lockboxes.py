@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 from collections import deque
-
-
 """
 Module: lockboxes.py
 
