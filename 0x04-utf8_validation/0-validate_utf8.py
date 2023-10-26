@@ -17,7 +17,7 @@ def validUTF8(data):
 
     for byte in data:
         if next_byte == 0:
-            print(byte , "= in binary: " , bin(byte >> 5))
+            # print(byte , "= in binary: " , bin(byte >> 5))
             # Check the most significant bits of the byte,
             # to determine the number of following bytes.
             if byte >> 5 == 0b110 or byte >> 5 == 0b1110:
