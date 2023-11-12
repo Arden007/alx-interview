@@ -9,7 +9,7 @@ const request = require('request');
  * Retrieves and prints the characters of a Star Wars movie.
  * @param {number} movieId - The ID of the Star Wars movie.
  */
-async function getMovieCharacters(movieId) {
+async function getMovieCharacters (movieId) {
   const baseUrl = 'https://swapi-api.hbtn.io/api/';
   const filmUrl = `${baseUrl}films/${movieId}/`;
 
@@ -35,7 +35,7 @@ async function getMovieCharacters(movieId) {
  * @param {string} url - The URL to make the request to.
  * @returns {Promise} - A promise that resolves with the parsed JSON response.
  */
-function makeRequest(url) {
+function makeRequest (url) {
   return new Promise((resolve, reject) => {
     request(url, (error, response, body) => {
       if (error) {
