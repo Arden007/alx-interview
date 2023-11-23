@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module determines the fewest number of coins needed to meet a given amount total
+Module determines the fewest number of coins needed to meet a given amounttotal
 """
 
 
