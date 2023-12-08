@@ -54,16 +54,13 @@ def isWinner(x, nums):
     - str or None: The name of the player with the most wins (Maria or Ben).
     If the winner cannot be determined, return None.
     """
-    if x is None or nums is None:
+    if x is None or nums is None or x == 0 or nums == []:
         return None
 
     maria_wins = 0
     ben_wins = 0
 
     for n in nums:
-        if n <= 0:
-            return None  # Invalid input, cannot determine a winner
-
         prime_nos = [i for i in range(1, n + 1) if is_prime(i)]
         if len(prime_nos) % 2 == 0:
             ben_wins += 1
